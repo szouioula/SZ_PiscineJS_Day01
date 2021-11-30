@@ -15,6 +15,7 @@ function firstDuplicateValue(array){
          }
         
     }
+    return -1;
 }
     
 
