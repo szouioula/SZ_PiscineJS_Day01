@@ -7,13 +7,17 @@ function pocketMoney(coins){
     }
     coins.sort(compare);
     for(let i=0; i<(coins.length -1); i++){
-              if(coins[i]<=0){
-                  return "vous avez pas d'argent !!";
-              }
-              sumCoins=sumCoins+coins[i];
+        if(coins[i]<0){
+            return 1;
+        }
+        sumCoins=sumCoins+coins[i];
     }
-    return sumCoins+1;
-}
+    if(sumCoins==coins[coins.length-1] || sumCoins+1 == coins[coins.length-1]){
+        return sumCoins+coins[coins.length-1]+1;
+    }else if(sumCoins<coins[coins.length-1]){
+        return sumCoins+1;
+    }
     
+}    
 
 exports.pocketMoney =  pocketMoney;
