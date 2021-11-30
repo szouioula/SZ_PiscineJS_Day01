@@ -6,9 +6,7 @@ function firstDuplicateValue(array){
         }
         
          for (let j=i+1; j< array.length; j++) {
-         let cpt=0;
             if(array[i]==array[j]){
-            	cpt++;
               return array[i];
             }
            
