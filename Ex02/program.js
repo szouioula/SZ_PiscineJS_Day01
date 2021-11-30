@@ -16,8 +16,10 @@ function pocketMoney(coins){
         return sumCoins+coins[coins.length-1]+1;
     }else if(sumCoins<coins[coins.length-1]){
         return sumCoins+1;
+    }else if(sumCoins>coins[coins.length-1]){
+     	return sumCoins+coins[coins.length-1]+1;
     }
     
-}    
+} 
 
 exports.pocketMoney =  pocketMoney;
