@@ -1,20 +1,12 @@
 function firstDuplicateValue(array){
-
-    for (let i=0; i<array.length; i++){
-        if(array[i]<=0){
-            return "votre tableau contient des valeurs nulles ou négatives";
-        }
-        
-         for (let j=i+1; j< array.length; j++) {
-            if(array[i]==array[j]){
-              return array[i];
-            }
-           
+    let temp = [];
+     for(let i = 0; i<array.length ; i++){
+         if(temp.indexOf(array[i]) != -1){
+             return array[i];
          }
-        
-    }
-    return -1;
+         temp.push(array[i]);
+         
+     }
+     return -1;
 }
-    
-
 exports.firstDuplicateValue =  firstDuplicateValue;
